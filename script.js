@@ -40,7 +40,7 @@ let checkWidth = () => {
 }
 
 const displayMenu = () => {
-  const windowBreakpoint = 650
+  const windowBreakpoint = 850
 
   if (checkWidth() >= windowBreakpoint && menuType === undefined) {
     menu();

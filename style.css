@@ -12,7 +12,7 @@ body {
   --font-size-h1: clamp(1.1rem, 7.3vmin, 3.5rem);
   --font-size-h3: clamp(0.95rem, 4.7vmin, 2.8rem);
   --font-size-paragraph: clamp(0.75rem, 3.5vmin, 2.2rem);
-  --font-size-alt-paragraph: clamp(0.75rem, 3vmin, 2rem);
+  --font-size-alt-paragraph: clamp(0.75rem, 2.8vmin, 2rem);
   --font-size-button: clamp(0.8rem, 3vmin, 2.2rem);
   --width: 62%;
   --padding-side-top: 4%;
@@ -74,6 +74,7 @@ img {
 /*nav hamburger section*/
 
 .nav-ham {
+  padding-top: var(--padding-side-top);
   position: relative;
   justify-content: space-between;
 }
@@ -127,11 +128,11 @@ img {
 }
 
 #checkbox:checked ~ .nav-ham--label::before {
-  rotate: 405deg;
+  rotate: 135deg;
 }
 
 #checkbox:checked ~ .nav-ham--label::after {
-  rotate: -405deg;
+  rotate: -135deg;
 }
 
 .nav-ham__list {
@@ -141,6 +142,7 @@ img {
   right: 0;
   height: 0;
   flex-direction: column;
+  justify-content: center;
   gap: var(--padding-side-button);
   background: rgba(var(--color-alt-background2), 0.8);
   overflow: hidden;
@@ -148,7 +150,7 @@ img {
 }
 
 #checkbox:checked ~ .nav-ham__list {
-  justify-content: center;
+
   height: 45vmin;
   padding: 4vmin var(--margin-nav) 4vmin 4vmin;
   transition: height var(--animation-timing), padding var(--animation-timing);
@@ -285,12 +287,8 @@ img {
 
 @media (max-width: 850px) {
 
-  .logo {
-    width: 90%;
-  }
-
   .ham-logo {
-    width: 70%;
+    width: 80%;
   }
 
   .hero {
@@ -325,10 +323,12 @@ img {
 
   .side {
     margin-top: var(--margin-side);
+    padding-top: var(--margin-side);
+    padding-bottom: var(--margin-side);
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .ham-logo {
     width: 60%;
     padding-right: 0;
