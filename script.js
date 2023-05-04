@@ -1,4 +1,3 @@
-
 const header = document.getElementById("header");
 let menuType;
 
@@ -21,16 +20,18 @@ const menu = () => {
 
 const hamburger = () => {
   header.insertAdjacentHTML("beforeend", `
-<nav class="nav-ham">
-    <a href=""><img class="" src="./img/logo.svg" alt="logo"/></a>
-        <ul class="">
-          <li class=""><a href="#" class="">Home</a></li>
-          <li class=""><a href="#" class="">About</a></li>
-          <li class=""><a href="#" class="">Contact</a></li>
-          <li class=""><a href="#" class="">Sign In</a></li>
-          <li class=""><a href="#" class="nav__link nav-ham__link--button">Sign Up</a></li>
-        </ul>
-  </nav>
+<nav class="nav nav-ham">
+  <a href=""><img class="ham-logo" src="./img/logo.svg" alt="logo"/></a>
+  <input id="checkbox" class="nav-ham__input" type="checkbox" />
+  <label class="nav-ham--label" for="checkbox"></label>
+  <ul class="nav__list nav-ham__list">
+      <li class="nav__item"><a href="#" class="nav__link nav-ham__link">Home</a></li>
+      <li class="nav__item"><a href="#" class="nav__link nav-ham__link">About</a></li>
+      <li class="nav__item"><a href="#" class="nav__link nav-ham__link">Contact</a></li>
+      <li class="nav__item"><a href="#" class="nav__link nav-ham__link">Sign In</a></li>
+      <li class="nav__item"><a href="#" class="nav__link nav__link--button">Sign Up</a></li>
+   </ul>
+</nav>
 `)
 };
 
@@ -57,7 +58,6 @@ const displayMenu = () => {
   } else {
     return
   }
-  console.log(window.innerWidth)
 };
 
 displayMenu();
