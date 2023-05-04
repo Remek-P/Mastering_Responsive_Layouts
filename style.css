@@ -1,0 +1,248 @@
+body {
+  margin: 0 auto;
+  font-family: Roboto, sans-serif;
+  font-size: clamp(0.5rem, 2.2vmin, 1.5rem);
+  /*font-size: 21px;*/
+  --margin-side: 8%;
+  --color-background: #38CFD9;
+  --color-alt-background: #136C72;
+  --color-text: #FFF;
+  --font-size-h1: clamp(1.1rem, 7.3vmin, 3.5rem);
+  --font-size-h3: clamp(0.95rem, 4.7vmin, 2.8rem);
+  --font-size-paragraph: clamp(0.75rem, 3.5vmin, 2.2rem);
+  --font-size-alt-paragraph: clamp(0.75rem, 3vmin, 2rem);
+  --font-size-button: clamp(0.8rem, 3vmin, 2.2rem);
+  --width: 62%;
+  --padding-side-top: 4%;
+  --padding-nav: 2em;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*nav menu section*/
+
+.nav {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-alt-background);
+  padding: 1em var(--margin-side);
+}
+
+.logo {
+  padding-right: var(--padding-nav);
+}
+
+.nav__list {
+  display: flex;
+  color: var(--color-text);
+}
+
+.nav__list:last-child {
+  margin-left: auto;
+}
+
+.nav__item {
+  padding-right: var(--padding-nav);
+}
+
+.nav__item:last-of-type {
+  padding-right: 0;
+}
+
+.nav__link {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.nav__link--button {
+  background: #fff;
+  color: #136c72;
+  padding: 0.25em 1em;
+  border-radius: 10em;
+}
+
+/*nav hamburger section*/
+
+.nav-ham {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  background-color: var(--color-alt-background);
+  padding: 1em var(--margin-side);
+}
+
+.nav-ham__link--button {
+  background: #fff;
+  color: #136c72;
+  padding: 0.25em 1em;
+  border-radius: 50em;
+}
+
+/*hero section*/
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 10% var(--margin-side) 12% var(--margin-side);
+  background-color: #23424A;
+  color: var(--color-text);
+}
+
+.container {
+  width: var(--width);
+  /*max-width: 800px;*/
+}
+
+.header {
+  font-size: var(--font-size-h1);
+  line-height: 1.17em;
+  font-weight: 900;
+}
+
+.paragraph {
+  margin: 4% 0 10.5% 0;
+  font-size: var(--font-size-paragraph);
+  line-height: 1.5em;
+  font-weight: 100;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 3%;
+  padding: 3.2% 9%;
+  font-weight: 700;
+  font-size: var(--font-size-button);
+  color: var(--color-alt-background);
+  text-transform: uppercase;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-background);
+  border-radius: 500px;
+}
+
+.img {
+  width: calc(100% - var(--width) - 8%);
+  aspect-ratio: 392/292;
+}
+
+.button:hover,
+.button:focus {
+  opacity: .75;
+}
+
+/*benefits section*/
+
+.benefits {
+  display: flex;
+  justify-content: space-between;
+  margin: 5% var(--margin-side) 0 var(--margin-side);
+}
+
+.core {
+  width: var(--width);
+  padding-top: var(--padding-side-top);
+  font-size: var(--font-size-paragraph);
+  color: var(--color-alt-background);
+}
+
+.core__header {
+  font-size: var(--font-size-h3);
+  font-weight: 700;
+  line-height: 1.17em;
+}
+
+.core__paragraph {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-alt-paragraph);
+  line-height: 1.5em;
+}
+
+.core__paragraph--space {
+  padding-top: 4vmin;
+}
+
+.side {
+  width: calc(100% - var(--width) - 8%);
+  padding: var(--padding-side-top) 2%;
+  background-color: var(--color-alt-background);
+  text-align: center;
+  color: var(--color-text);
+}
+
+.side--container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3vmin;
+}
+
+.side__header {
+  font-size: var(--font-size-h3);
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.side__paragraph {
+  font-size: var(--font-size-alt-paragraph);
+  line-height: 1.5em;
+}
+
+.space {
+  padding-top: 6.8vmin;
+}
+
+@media (max-width: 2000px) {
+  .img {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 850px) {
+
+  .logo {
+    width: 90%;
+    /*max-height: 100%;*/
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 10% 0 12% 0;
+  }
+
+  .container, .img {
+    width: 100%;
+  }
+
+  .container {
+    padding: 0 var(--margin-side) 0 var(--margin-side);
+  }
+
+  .img {
+    order: -1;
+    padding-bottom: 4em;
+  }
+
+  .benefits {
+    flex-direction: column;
+    margin-top: 5%;
+  }
+
+  .side, .core {
+    width: 100%;
+
+    padding-right: var(--margin-side);
+    padding-left: var(--margin-side);
+  }
+
+  .side {
+    margin-top: var(--margin-side);
+  }
+}
+
+@media (max-width: 500px) {
+  .logo {
+    width: 60%;
+    padding-right: 0;
+  }
+}
