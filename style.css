@@ -1,7 +1,7 @@
 body {
   margin: 0 auto;
   font-family: Roboto, sans-serif;
-  font-size: clamp(0.5rem, 2.2vmin, 1.5rem);
+  font-size: clamp(0.8rem, 2.5vmin, 1.5rem);
   --margin-side: 8%;
   --margin-nav: 10px;
   --color-background: #38CFD9;
@@ -135,6 +135,7 @@ img {
 }
 
 .nav-ham__list {
+  box-sizing: content-box;
   position: absolute;
   top: 100%;
   right: 0;
@@ -149,7 +150,7 @@ img {
 #checkbox:checked ~ .nav-ham__list {
   justify-content: center;
   height: 45vmin;
-  padding: 3vmin var(--margin-nav) 3vmin 3vmin;
+  padding: 4vmin var(--margin-nav) 4vmin 4vmin;
   transition: height var(--animation-timing), padding var(--animation-timing);
 }
 
