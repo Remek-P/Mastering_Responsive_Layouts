@@ -259,6 +259,8 @@ img {
   font-size: var(--font-size-h3);
   font-weight: 700;
   text-transform: capitalize;
+  padding-bottom: 1.5vmin;
+  padding-top: 0.5vmin;
 }
 
 .side__paragraph {
