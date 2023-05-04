@@ -40,18 +40,19 @@ let checkWidth = () => {
 }
 
 const displayMenu = () => {
+  const windowBreakpoint = 650
 
-  if (checkWidth() >= 650 && menuType === undefined) {
+  if (checkWidth() >= windowBreakpoint && menuType === undefined) {
     menu();
     menuType = "menu"
-  } else if (checkWidth() < 650 && menuType === undefined) {
+  } else if (checkWidth() < windowBreakpoint && menuType === undefined) {
     hamburger();
     menuType = "hamburger"
-  } else if (checkWidth() < 650 && menuType === "menu") {
+  } else if (checkWidth() < windowBreakpoint && menuType === "menu") {
     document.querySelector(".nav").remove();
     hamburger();
     menuType = "hamburger"
-  } else if (checkWidth() >= 650 && menuType === "hamburger") {
+  } else if (checkWidth() >= windowBreakpoint && menuType === "hamburger") {
     document.querySelector(".nav-ham").remove();
     menu();
     menuType = "menu"
