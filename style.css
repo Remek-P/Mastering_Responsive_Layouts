@@ -270,6 +270,11 @@ img {
   padding-top: 6.8vmin;
 }
 
+.footer {
+  height: 2vmin;
+  background-color: var(--color-text);
+}
+
 @media (max-width: 2000px) {
   .img {
     align-self: flex-start;
