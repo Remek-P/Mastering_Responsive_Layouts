@@ -17,7 +17,7 @@ body {
   --width: 62%;
   --padding-side-top: 4%;
   --padding-nav: 2em;
-  --padding-side-button: 1em;
+  --padding-side-button: 1.8em;
   --hamburger-size: 6vmin;
   --hamburger-line-height: 1vmin;
   --animation-timing: 800ms ease-in-out;
@@ -147,7 +147,8 @@ img {
 }
 
 #checkbox:checked ~ .nav-ham__list {
-  height: 250px;
+  justify-content: center;
+  height: 45vmin;
   padding: 3vmin var(--margin-nav) 3vmin 3vmin;
   transition: height var(--animation-timing), padding var(--animation-timing);
 }
