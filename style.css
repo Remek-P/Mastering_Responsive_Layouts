@@ -38,7 +38,7 @@ img {
 
 .logo {
   padding-right: var(--padding-nav);
-
+</header>
 }
 
 .nav__list {
@@ -278,7 +278,10 @@ img {
 
   .logo {
     width: 90%;
-    /*max-height: 100%;*/
+  }
+
+  .ham-logo {
+    width: 70%;
   }
 
   .hero {
@@ -317,8 +320,8 @@ img {
 }
 
 @media (max-width: 500px) {
-  .logo {
-    width: 70%;
+  .ham-logo {
+    width: 60%;
     padding-right: 0;
   }
 }

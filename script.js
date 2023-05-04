@@ -41,17 +41,17 @@ let checkWidth = () => {
 
 const displayMenu = () => {
 
-  if (checkWidth() >= 850 && menuType === undefined) {
+  if (checkWidth() >= 650 && menuType === undefined) {
     menu();
     menuType = "menu"
-  } else if (checkWidth() < 850 && menuType === undefined) {
+  } else if (checkWidth() < 650 && menuType === undefined) {
     hamburger();
     menuType = "hamburger"
-  } else if (checkWidth() < 850 && menuType === "menu") {
+  } else if (checkWidth() < 650 && menuType === "menu") {
     document.querySelector(".nav").remove();
     hamburger();
     menuType = "hamburger"
-  } else if (checkWidth() >= 850 && menuType === "hamburger") {
+  } else if (checkWidth() >= 650 && menuType === "hamburger") {
     document.querySelector(".nav-ham").remove();
     menu();
     menuType = "menu"
@@ -61,5 +61,6 @@ const displayMenu = () => {
 };
 
 displayMenu();
+// check if user resized window or switched landscape/portrait view
 window.onresize = displayMenu;
 
