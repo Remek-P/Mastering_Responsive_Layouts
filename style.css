@@ -60,7 +60,11 @@ img {
 .nav__link {
   text-transform: uppercase;
   font-weight: 700;
+}
 
+.nav__link:focus,
+.nav__link:hover {
+  opacity: 0.75;
 }
 
 .nav__link--button {
