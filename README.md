@@ -1,4 +1,4 @@
-# Modified_KevinPowell_challange
+# Mastering_Responsive_Layouts
 
 Modified Kevin Powell tutorial, for creating responsive mockup webpage with hamburger menu.
 
